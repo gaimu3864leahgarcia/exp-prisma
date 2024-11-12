@@ -30,7 +30,7 @@ model Person {
   password      String?
   age           Int?
   bio           String?
-  bioA           String?
+  biooA           String?
   bioB          String?
   bioC          String?
   emailVerified Boolean          @default(false)
