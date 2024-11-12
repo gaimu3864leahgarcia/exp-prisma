@@ -30,6 +30,8 @@ model Person {
   password      String?
   age           Int?
   bio           String?
+  bioA          String?
+  bioB          String?
   emailVerified Boolean          @default(false)
   lastLogin     DateTime?
   createdAt              DateTime         @default(now())
