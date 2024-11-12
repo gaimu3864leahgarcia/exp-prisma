@@ -32,6 +32,7 @@ model Person {
   bio           String?
   bioB          String?
   bioC          String?
+  fieldA        String?
   emailVerified Boolean          @default(false)
   lastLogin     DateTime?
   biooA           String?
