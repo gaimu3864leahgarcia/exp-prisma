@@ -23,6 +23,7 @@
     "migration:dev": "dotenv -e .env.development -- npx prisma migrate dev",
     "migration:reset": "dotenv -e .env.development -- npx prisma migrate reset",
     "migration:seed": "dotenv -e .env.development -- npx prisma db seed",
+    "migration:rsv": "dotenv -e .env.development -- npx prisma migrate resolve --applied '20241112165611_'",
     "db:push": "dotenv -e .env.development -- npx prisma db push",
     "db:pull": "dotenv -e .env.development -- npx prisma db pull",
     "studio": "dotenv -e .env.development -- npx prisma studio",

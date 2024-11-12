@@ -30,15 +30,10 @@ model Person {
   password      String?
   age           Int?
   bio           String?
-  bioB          String?
-  bioC          String?
   fieldA        String?
   fieldB        String?
   emailVerified Boolean          @default(false)
   lastLogin     DateTime?
-  biooA           String?
-  createdAt              DateTime         @default(now())
-  updatedAt              DateTime?        @default(now())
   tasks         TaskAssignment[]
 }
 
