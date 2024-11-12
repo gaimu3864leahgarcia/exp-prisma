@@ -31,7 +31,7 @@ model Person {
   name     String
   avatar   String?
   password String?
-  age      Int
+  age      Int?
   tasks    TaskAssignment[]
 }
 
