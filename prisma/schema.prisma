@@ -32,6 +32,9 @@ model Person {
   avatar   String?
   password String?
   age      Int?
+  bio                    String?
+  emailVerified          Boolean          @default(false)
+  lastLogin              DateTime?
   tasks    TaskAssignment[]
 }
 
