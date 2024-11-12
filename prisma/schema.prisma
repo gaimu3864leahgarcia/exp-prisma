@@ -26,13 +26,15 @@ model Status {
 }
 
 model Person {
-  id     Int              @id @default(autoincrement())
-  email  String           @unique
-  name   String
-  avatar String?
+  id       Int              @id @default(autoincrement())
+  email    String           @unique
+  name     String
+  avatar   String?
+  password String?
   age      Int
-  tasks  TaskAssignment[]
+  tasks    TaskAssignment[]
 }
+
 
 model TaskAssignment {
   taskId     Int
