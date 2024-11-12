@@ -23,6 +23,8 @@
     "migration:dev": "dotenv -e .env.development -- npx prisma migrate dev",
     "migration:reset": "dotenv -e .env.development -- npx prisma migrate reset",
     "migration:seed": "dotenv -e .env.development -- npx prisma db seed",
+    "db:push": "dotenv -e .env.development -- npx prisma db push",
+    "db:pull": "dotenv -e .env.development -- npx prisma db pull",
     "studio": "dotenv -e .env.development -- npx prisma studio",
     "start": "dotenv -e .env.development -- node ./src/server.js",
     "test": "dotenv -e .env.test -- playwright test --config=configs/playwright.config.js",

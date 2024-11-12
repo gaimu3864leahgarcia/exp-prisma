@@ -1,8 +1,5 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
-  provider = "prisma-client-js"
+  provider        = "prisma-client-js"
   previewFeatures = ["driverAdapters"]
 }
 
@@ -26,25 +23,25 @@ model Status {
 }
 
 model Person {
-  id       Int              @id @default(autoincrement())
-  email    String           @unique
-  name     String
-  avatar   String?
-  password String?
-  age      Int?
-  bio                    String?
-  emailVerified          Boolean          @default(false)
-  lastLogin              DateTime?
-  tasks    TaskAssignment[]
+  id            Int              @id @default(autoincrement())
+  email         String           @unique
+  name          String
+  avatar        String?
+  password      String?
+  age           Int?
+  bio           String?
+  emailVerified Boolean          @default(false)
+  lastLogin     DateTime?
+  createdAt              DateTime         @default(now())
+  tasks         TaskAssignment[]
 }
-
 
 model TaskAssignment {
   taskId     Int
-  task       Task     @relation(fields: [taskId], references: [id], onDelete: Cascade)
   personId   Int
-  person     Person   @relation(fields: [personId], references: [id], onDelete: Cascade)
   assignedAt DateTime @default(now())
+  person     Person   @relation(fields: [personId], references: [id], onDelete: Cascade)
+  task       Task     @relation(fields: [taskId], references: [id], onDelete: Cascade)
 
-  @@id(name: "assignmentId", [taskId, personId])
+  @@id([taskId, personId], name: "assignmentId")
 }
