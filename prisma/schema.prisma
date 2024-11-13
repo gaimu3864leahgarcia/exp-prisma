@@ -37,6 +37,7 @@ model Person {
   fieldE        String?
   fielde        String?
   fieldf        String?
+  fieldg        String?
   emailVerified Boolean          @default(false)
   lastLogin     DateTime?
   tasks         TaskAssignment[]
