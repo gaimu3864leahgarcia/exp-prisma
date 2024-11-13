@@ -1,2 +1,2 @@
 -- AlterTable
-ALTER TABLE "Person" ADD COLUMN     "fieldg" TEXT;
+-- ALTER TABLE "Person" ADD COLUMN     "fieldg" TEXT;
